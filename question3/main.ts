@@ -91,8 +91,8 @@ export class Connect4 {
       same = 0;
 
       for(var i =0; i< this.arr[0].length-1; i++){ // checks to see if there is a connect four on the second half (diagaonlly) of the coard
-        var temp = i;
-        for(var j = 0; j< this.arr.length-1 && temp < this.arr.length -1; j++){
+        var temp = 0;
+        for(var j = i; j< this.arr.length-1 && temp < this.arr.length -1; j++){
           if(this.arr[temp][j] == 1 && this.arr[temp+1][j+1] == 1 && curr_turn == 1){
             same++;
           }
