@@ -4,6 +4,7 @@ import { Connect4 } from "./main";
 
 describe("Sample Tests", function() {
   it("Should pass sample tests", function() {
+    spyOn(console, 'log').and.callThrough();
     let game;
     game = new Connect4();
     assert.equal(game.play(0), "Player 1 has a turn", "Should return 'Player 1 has a turn'")
